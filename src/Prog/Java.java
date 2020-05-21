@@ -2,21 +2,21 @@
 
 package Prog;
 
-//Java program to print leaf nodes from right to left 
+
 import java.util.*; 
 
 class Java
 
 { 
 	
-//A Binary Tree Node 
+ 
 static class Node 
 { 
 	int data; 
 	Node left, right; 
 }; 
 
-//Utility function to create a new tree node 
+
 static Node newNode(int data) 
 { 
 	Node temp = new Node(); 
@@ -25,33 +25,29 @@ static Node newNode(int data)
 	return temp; 
 } 
 
-//Function to print leaf 
-//nodes from right to left 
+
 static void printLeafNodes(Node root) 
 { 
-	// If node is null, return 
+	
 	if (root == null) 
 		return; 
 
-	// If node is leaf node, print its data 
+	 
 	if (root.left == null && root.right == null) 
 	{ 
 		System.out.print( root.data +" "); 
 		return; 
 	} 
 
-	// If right child exists, check for leaf 
-	// recursively 
+	
 	if (root.right != null) 
 		printLeafNodes(root.right); 
 
-	// If left child exists, check for leaf 
-	// recursively 
 	if (root.left != null) 
 		printLeafNodes(root.left); 
 } 
 
-//Driver code 
+
 public static void main(String args[]) 
 { 
 	Node root = newNode(8); 
@@ -69,4 +65,4 @@ public static void main(String args[])
 } 
 } 
 
-//This code is contributed by Arnab Kundu 
+
